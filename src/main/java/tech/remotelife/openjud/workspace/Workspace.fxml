@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+<?import org.controlsfx.control.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.remotelife.openjud.workspace.WorkspaceController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Arquivo">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Sair" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Processo">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Novo" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Sobre" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <StatusBar layoutY="739.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <SplitPane dividerPositions="0.5" layoutY="25.0" prefHeight="706.0" prefWidth="1024.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <items>
+          <AnchorPane maxWidth="250.0" minHeight="0.0" minWidth="153.0" prefHeight="711.0" prefWidth="153.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="704.0" prefWidth="662.0">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="766.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <items>
+                      <Button mnemonicParsing="false" text="Pendências" />
+                    </items>
+                  </ToolBar>
+                  <TabPane id="AppTabPane" fx:id="appTabPane" layoutX="1.0" prefHeight="711.0" prefWidth="766.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                    <tabs>
+                        <Tab onSelectionChanged="#onSelectionTabChange" text="Novidades">
+                           <content>
+                              <AnchorPane id="appTabPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <WebView fx:id="novidadesWebView" prefHeight="679.0" prefWidth="758.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                      <Tab fx:id="areaTrabalhoTab" text="Área de Trabalho">
+                        <content>
+                          <AnchorPane id="appTabPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </Tab>
+                        <Tab fx:id="processosTab" text="Processos">
+                           <content>
+                              <AnchorPane id="appTabPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
